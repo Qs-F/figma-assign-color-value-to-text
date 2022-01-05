@@ -1,1 +1,1 @@
-# figma-color-placeholder
+# srv `figma-color-placeholder`

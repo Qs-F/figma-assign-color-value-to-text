@@ -291,7 +291,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@figma/plugin-typings@^1.40.0":
+"@figma/plugin-typings@1.40.0":
   version "1.40.0"
   resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.40.0.tgz#b3ee30ec862870095ea97160270113139b1d122c"
   integrity sha512-PA73qVIn6KFVpnJkt2xNbCpaxx04pXs9eu22JH2123O7Mu17ARLDlXE+tt1ikACfsS6aEGsStI3IFPks+yomVA==
@@ -372,7 +372,7 @@
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
-"@types/color@^3.0.2":
+"@types/color@3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@types/color/-/color-3.0.2.tgz#3779043e782f562aa9157b5fc6bd07e14fd8e7f3"
   integrity sha512-INiJl6sfNn8iyC5paxVzqiVUEj2boIlFki02uRTAkKwAj++7aAF+ZfEv/XrIeBa0XI/fTZuDHW8rEEcEVnON+Q==
@@ -539,7 +539,7 @@
     "@typescript-eslint/types" "5.9.0"
     eslint-visitor-keys "^3.0.0"
 
-"@vercel/ncc@^0.33.1":
+"@vercel/ncc@0.33.1":
   version "0.33.1"
   resolved "https://registry.yarnpkg.com/@vercel/ncc/-/ncc-0.33.1.tgz#b240080a3c1ded9446a30955a06a79851bb38f71"
   integrity sha512-Mlsps/P0PLZwsCFtSol23FGqT3FhBGb4B1AuGQ52JTAtXhak+b0Fh/4T55r0/SVQPeRiX9pNItOEHwakGPmZYA==
@@ -778,7 +778,7 @@ color-string@^1.9.0:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
-color@^4.1.0:
+color@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/color/-/color-4.1.0.tgz#9502e6a2dcacb26adf4c60910a27628d010b3de3"
   integrity sha512-o2rkkxyLGgYoeUy1OodXpbPAQNmlNBrirQ8ODO8QutzDiDMNdezSOZLNnusQ6pUpCQJUsaJIo9DZJKqa2HgH7A==
@@ -2330,7 +2330,7 @@ react-fetch-hook@1.7.2:
   resolved "https://registry.yarnpkg.com/react-fetch-hook/-/react-fetch-hook-1.7.2.tgz#5aaddea774746f8e19fc3157248575d140d92108"
   integrity sha512-hgEBSzqIm3ZhTnmP0QrfDdVQJ4Gzc+EXGTxd1yHEC40QE3r1mHF7HKzJBiS4VNNdmFdOZ/bAZ5XmK4apW4JCFA==
 
-react-figma@^0.19.0:
+react-figma@0.19.0:
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/react-figma/-/react-figma-0.19.0.tgz#b7edca27db821b9c2ab5fdc57fbae78fa270dc31"
   integrity sha512-Oe5STjFKxgl2AGjH66d/o20qUFfsq0XWO8xQPgD7WwZypCDQYuNcsjgpX59RYm0mp3MLxC11+suvrPiwSe/wHQ==
@@ -2717,7 +2717,7 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-tsc-alias@^1.5.0:
+tsc-alias@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/tsc-alias/-/tsc-alias-1.5.0.tgz#bc26f8dccf96e4ea350adc3f64ad3d2325cad967"
   integrity sha512-Pb3y7ZjULKFHEV2US5dS58/hV76sE9Sn5iehiPjYqHcm/lx4eCGAJYoSmrVXQMPX+6baTnDFJD0MGOyqn94dIg==
@@ -2803,7 +2803,7 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-plugin-singlefile@^0.6.3:
+vite-plugin-singlefile@0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/vite-plugin-singlefile/-/vite-plugin-singlefile-0.6.3.tgz#ed8351e0942d9ff1c4f7539da7f70a24ff960d32"
   integrity sha512-GYFjcyz8k4ihR/2NP1zqSxRYUPexZbXkMPvD39XGgHMSSpQZJjlGsDamwTCA8zhG2ntJTnH1HAe4edrWdtL08Q==

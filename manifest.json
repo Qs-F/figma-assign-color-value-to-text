@@ -1,0 +1,10 @@
+{
+  "name": "Placeholders for selected node fill color",
+  "id": "1040245744043159776",
+  "api": "1.0.0",
+  "main": "dist/index.js",
+  "ui": "dist/index.html",
+  "editorType": [
+    "figma"
+  ]
+}

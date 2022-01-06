@@ -18,6 +18,12 @@ const walk = async <StackNode>(
   )
 }
 
+const loadFonts = async (node: TextNode) => {
+  for (const font of node.getRangeAllFontNames(0, node.characters.length)) {
+    await figma.loadFontAsync(font)
+  }
+}
+
 const main = async () => {
   figma.showUI(__html__, { visible: false })
 
@@ -42,32 +48,30 @@ const main = async () => {
       if (node.fills[0]?.type !== 'SOLID') {
         return
       }
-      const rgb = node.fills[0].color
-      await walk(
-        node,
-        async (node): Promise<boolean> => {
-          if (node.name === '$hex' && node.type === 'TEXT') {
-            for (const font of node.getRangeAllFontNames(
-              0,
-              node.characters.length
-            )) {
-              console.log(font)
-              await figma.loadFontAsync(font)
-              console.log('finished')
-            }
-            console.log(rgb)
-            const color = Color({
-              r: rgb.r * 255,
-              g: rgb.g * 255,
-              b: rgb.b * 255,
-            })
-            node.characters = color.hex()
-          }
+      const fill = new Color(
+        Object.fromEntries(
+          Object.entries(node.fills[0].color).map(([k, v]) => [k, v * 255])
+        )
+      )
+      await walk(node, async (node): Promise<boolean> => {
+        if (node.type !== 'TEXT') {
           return true
         }
-      )
+        if (node.name === '$hex') {
+          await loadFonts(node)
+          node.characters = fill.hex()
+          return true
+        }
+        if (node.name === '$hsl') {
+          await loadFonts(node)
+          node.characters = fill.hsl().round().string()
+          return true
+        }
+        return true
+      })
     })
   )
+  figma.notify('Done ✨')
   figma.closePlugin()
 }
 

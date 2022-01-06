@@ -1,6 +1,6 @@
 import reactRefresh from '@vitejs/plugin-react-refresh'
-import { viteSingleFile } from 'vite-plugin-singlefile'
 import { defineConfig } from 'vite'
+import { viteSingleFile } from 'vite-plugin-singlefile'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -12,6 +12,7 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: '../dist',
+    emptyOutDir: false,
     target: 'esnext',
     assetsInlineLimit: 100000000,
     chunkSizeWarningLimit: 100000000,

@@ -30,7 +30,7 @@ const main = async () => {
   const nodes = figma.currentPage.selection
 
   if (nodes.length < 1) {
-    figma.notify('Node を選択してください')
+    figma.notify('Please select at least one node')
     figma.closePlugin()
   }
 

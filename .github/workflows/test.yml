@@ -38,26 +38,26 @@ jobs:
         run: |
           yarn test
 
-  test-publish:
-    name: test-publish
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
-      - name: Get dependencies
-        run: |
-          yarn install
-
-      - name: Test
-        run: |
-          yarn test:publish
+  # test-publish:
+  #   name: test-publish
+  #   runs-on: ubuntu-latest
+  #   defaults:
+  #     run:
+  #       shell: bash
+  #       working-directory: ./
+  # 
+  #   steps:
+  #     - uses: actions/checkout@v2
+  # 
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         node-version: '16'
+  # 
+  #     - name: Get dependencies
+  #       run: |
+  #         yarn install
+  # 
+  #     - name: Test
+  #       run: |
+  #         yarn test:publish

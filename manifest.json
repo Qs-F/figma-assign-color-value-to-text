@@ -1,5 +1,5 @@
 {
-  "name": "Placeholders for selected node fill color",
+  "name": "Assign Color Value to Text",
   "id": "1040245744043159776",
   "api": "1.0.0",
   "main": "dist/index.js",

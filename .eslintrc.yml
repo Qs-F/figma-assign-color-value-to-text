@@ -8,7 +8,6 @@ extends:
   - "plugin:@typescript-eslint/eslint-recommended"
   - "plugin:@typescript-eslint/recommended"
   - "plugin:react/recommended"
-  - "plugin:prettier/recommended"
   - "google"
   - "prettier"
   - "plugin:import/errors"
@@ -44,6 +43,7 @@ rules:
   react/jsx-uses-react: "off"
   react/react-in-jsx-scope: "off"
   no-unused-vars: "off"
+  function-call-argument-newline: ["error", "consistent"]
   "@typescript-eslint/no-unused-vars":
     - error
     - vars: "all"

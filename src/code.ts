@@ -53,22 +53,25 @@ const main = async () => {
           Object.entries(node.fills[0].color).map(([k, v]) => [k, v * 255])
         )
       )
-      await walk(node, async (node): Promise<boolean> => {
-        if (node.type !== 'TEXT') {
+      await walk(
+        node,
+        async (node): Promise<boolean> => {
+          if (node.type !== 'TEXT') {
+            return true
+          }
+          if (node.name === '$hex') {
+            await loadFonts(node)
+            node.characters = fill.hex()
+            return true
+          }
+          if (node.name === '$hsl') {
+            await loadFonts(node)
+            node.characters = fill.hsl().round().string()
+            return true
+          }
           return true
         }
-        if (node.name === '$hex') {
-          await loadFonts(node)
-          node.characters = fill.hex()
-          return true
-        }
-        if (node.name === '$hsl') {
-          await loadFonts(node)
-          node.characters = fill.hsl().round().string()
-          return true
-        }
-        return true
-      })
+      )
     })
   )
   figma.notify('Done ✨')
@@ -76,13 +79,3 @@ const main = async () => {
 }
 
 main()
-
-// figma.ui.onmessage = () => {
-//   const selected = figma.currentPage.selection
-//   if (selected.length < 1) {
-//     figma.notify('Please select 1 node')
-//     figma.closePlugin()
-//   }
-//   figma.currentPage.selection = nodes
-//   figma.viewport.scrollAndZoomIntoView(nodes)
-// }

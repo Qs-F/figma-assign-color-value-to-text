@@ -30,8 +30,8 @@ const main = async () => {
   const nodes = figma.currentPage.selection
 
   if (nodes.length < 1) {
-    figma.notify('Please select at least one node')
-    figma.closePlugin()
+    figma.closePlugin('Please select at least one node')
+    return
   }
 
   await Promise.all(
@@ -74,8 +74,7 @@ const main = async () => {
       )
     })
   )
-  figma.notify('Done ✨')
-  figma.closePlugin()
+  figma.closePlugin('Done ✨')
 }
 
 main()

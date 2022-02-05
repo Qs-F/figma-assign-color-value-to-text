@@ -18,10 +18,14 @@ const walk = async <StackNode>(
   )
 }
 
-const loadFonts = async (node: TextNode) => {
-  for (const font of node.getRangeAllFontNames(0, node.characters.length)) {
-    await figma.loadFontAsync(font)
-  }
+const apply = async (node: TextNode, text: string): Promise<boolean> => {
+  await Promise.all(
+    node.getRangeAllFontNames(0, node.characters.length).map(async (font) => {
+      await figma.loadFontAsync(font)
+    })
+  )
+  node.characters = text
+  return true
 }
 
 const main = async () => {
@@ -48,10 +52,17 @@ const main = async () => {
       if (node.fills[0]?.type !== 'SOLID') {
         return
       }
+      const alpha = node.fills[0].opacity || 1
       const fill = new Color(
-        Object.fromEntries(
-          Object.entries(node.fills[0].color).map(([k, v]) => [k, v * 255])
-        )
+        Object.entries(node.fills[0].color).map(([, v]) => v * 255),
+        'rgb'
+      )
+      const fillA = new Color(
+        [
+          ...Object.entries(node.fills[0].color).map(([, v]) => v * 255),
+          parseFloat(alpha.toFixed(4)),
+        ],
+        'rgb'
       )
       await walk(
         node,
@@ -59,15 +70,19 @@ const main = async () => {
           if (node.type !== 'TEXT') {
             return true
           }
-          if (node.name === '$hex') {
-            await loadFonts(node)
-            node.characters = fill.hex()
-            return true
-          }
-          if (node.name === '$hsl') {
-            await loadFonts(node)
-            node.characters = fill.hsl().round().string()
-            return true
+          switch (node.name) {
+            case '$hex':
+              return apply(node, fill.hex())
+            case '$hsl':
+              return apply(node, fill.hsl().round().string())
+            case '$hsla':
+              return apply(node, fillA.hsl().round().string())
+            case '$rgb':
+              return apply(node, fill.rgb().round().string())
+            case '$rgba':
+              return apply(node, fillA.rgb().round().string())
+            case '$alpha':
+              return apply(node, alpha.toFixed(4))
           }
           return true
         }

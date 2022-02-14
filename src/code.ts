@@ -52,6 +52,11 @@ const main = async () => {
       if (node.fills[0]?.type !== 'SOLID') {
         return
       }
+      const styleName =
+        (node.fillStyleId !== '' &&
+          node.fillStyleId !== figma.mixed &&
+          figma.getStyleById(node.fillStyleId)?.name) ||
+        ''
       const alpha = node.fills[0].opacity || 1
       const fill = new Color(
         Object.entries(node.fills[0].color).map(([, v]) => v * 255),
@@ -83,6 +88,8 @@ const main = async () => {
               return apply(node, fillA.rgb().round().string())
             case '$alpha':
               return apply(node, alpha.toFixed(4))
+            case '$styleName':
+              return apply(node, styleName)
           }
           return true
         }

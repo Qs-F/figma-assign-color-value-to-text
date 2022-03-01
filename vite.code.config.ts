@@ -23,7 +23,7 @@ export default defineConfig(({ mode }) => ({
     watch: mode === 'production' ? null : {},
     sourcemap: mode === 'production' ? false : 'inline',
     lib: {
-      entry: path.resolve(__dirname, 'src/code.ts'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       formats: ['es'],
       fileName: () => `index.js`,
     },

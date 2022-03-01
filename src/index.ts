@@ -41,15 +41,19 @@ const main = async () => {
   await Promise.all(
     nodes.map(async (node) => {
       if (!('fills' in node)) {
+        figma.notify('😱 No fill')
         return
       }
       if (node.fills === figma.mixed) {
+        figma.notify('😱 Color is mixed (only 1 fill is allowed)')
         return
       }
       if (node.fills.length < 1) {
+        figma.notify('😱 Multiple colors are set (only 1 fill is allowed)')
         return
       }
       if (node.fills[0]?.type !== 'SOLID') {
+        figma.notify('😱 Color is not solid (probably gradient or image is set)')
         return
       }
       const styleName =

@@ -6,13 +6,13 @@ export const App = () => {
   const handler = () => {
     try {
       parent.postMessage(
-        {
-          pluginMessage: {
-            type: 'create-rectangles',
-            count: parseInt(textbox.current?.value || '0', 10),
+          {
+            pluginMessage: {
+              type: 'create-rectangles',
+              count: parseInt(textbox.current?.value || '0', 10),
+            },
           },
-        },
-        '*'
+          '*'
       )
     } catch (e) {
       setErr((e as object).toString())

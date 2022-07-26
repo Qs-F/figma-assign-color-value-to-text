@@ -2593,10 +2593,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-plugin-singlefile@0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-singlefile/-/vite-plugin-singlefile-0.10.0.tgz#337180076cb31d22444b9ee73789e0be215cc216"
-  integrity sha512-ZUpIqP+cqhOokuZUqiWDSHWyuhWlHX8movtQlFm0Rer/CfpZ8OqyVwCJvzQ9GLiV5f8sfjpdgDPgXdZnNORRpQ==
+vite-plugin-singlefile@0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-singlefile/-/vite-plugin-singlefile-0.11.0.tgz#a27f8cb94862c9ded3302318efb1fc3767071b4b"
+  integrity sha512-NLGe8SJ/SrnUVP6sTnvg4RBaobmcmqYusNhK3la8Bux0WA8IV9ebUkSNIcWLhVdjgAtQiCx1gSiZsS3Xd9+mjw==
   dependencies:
     micromatch "^4.0.5"
 

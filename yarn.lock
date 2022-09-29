@@ -223,10 +223,10 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@de-liker/drts@0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@de-liker/drts/-/drts-0.1.11.tgz#ac27290afe9dc76df59add3688bec1452ae24c28"
-  integrity sha512-7fEFzVCz2LmREtc0ZHulPljt8R5aE1CQNMWo4oLzHmQsa+HzRDADXlHwgLcY34AbKai6q0gucYVElWPMDLUJVg==
+"@de-liker/drts@0.1.14":
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/@de-liker/drts/-/drts-0.1.14.tgz#e6b610de7e8c15e3e27298dcdc0f39cabea47a51"
+  integrity sha512-fzltSfHztjBUhYFHSD5DWx9AwG94oLLDJ0EjKSjm3D3uINdP+/x+uPGyKbvscOfXu1JOlhasWFpKnbtBOVvhuQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.12.0"
     "@typescript-eslint/parser" "^5.12.0"

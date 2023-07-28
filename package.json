@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@de-liker/drts": "0.1.14",
-    "@figma/plugin-typings": "1.51.0",
+    "@figma/plugin-typings": "1.72.0",
     "@types/color": "3.0.3",
     "@types/node": "16.18.16",
     "@types/react": "18.0.36",

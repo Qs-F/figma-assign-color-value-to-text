@@ -409,10 +409,10 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@types/color-convert@*":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/color-convert/-/color-convert-2.0.0.tgz#8f5ee6b9e863dcbee5703f5a517ffb13d3ea4e22"
-  integrity sha512-m7GG7IKKGuJUXvkZ1qqG3ChccdIM/qBBo913z+Xft0nKCX4hAU/IxKwZBU4cpRZ7GS5kV4vOblUkILtSShCPXQ==
+"@types/color-convert@1":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@types/color-convert/-/color-convert-1.9.0.tgz#bfa8203e41e7c65471e9841d7e306a7cd8b5172d"
+  integrity sha512-OKGEfULrvSL2VRbkl/gnjjgbbF7ycIlpSsX7Nkab4MOWi5XxmgBYvuiQ7lcCFY5cPDz7MUNaKgxte2VRmtr4Fg==
   dependencies:
     "@types/color-name" "*"
 
@@ -421,12 +421,12 @@
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
-"@types/color@3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@types/color/-/color-3.0.3.tgz#e6d8d72b7aaef4bb9fe80847c26c7c786191016d"
-  integrity sha512-X//qzJ3d3Zj82J9sC/C18ZY5f43utPbAJ6PhYt/M7uG6etcF6MRpKdN880KBy43B0BMzSfeT96MzrsNjFI3GbA==
+"@types/color@3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@types/color/-/color-3.0.7.tgz#0359465917e77bac5254615b4dbfd593748329d8"
+  integrity sha512-e/ecxz2EGJhUEaoeFa9Xx6ayIkBFQ5bwKgOWzmrEtP+ApYB5ou+eOB71DasFsn3qCKzIPrbi/NKdM8lI0tnGUQ==
   dependencies:
-    "@types/color-convert" "*"
+    "@types/color-convert" "1"
 
 "@types/history@*":
   version "4.7.9"

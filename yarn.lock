@@ -344,10 +344,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@figma/plugin-typings@1.72.0":
-  version "1.72.0"
-  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.72.0.tgz#a6cba4940e324d8842a5b9455e576ddda0335fbd"
-  integrity sha512-SRW8qQOLf/QOtgP7OsUfw4oD6Z+tbenLR2PgNXGSh2SJohcnucIEEc7An5Wd5qTl35xfC4TmZE0YpTGMknVpgw==
+"@figma/plugin-typings@1.138.0":
+  version "1.138.0"
+  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.138.0.tgz#883d0a9fa51dda933305255067c1c7e9d944ecd0"
+  integrity sha512-bLP9wRf8c0e4z5GbXpDUXd7YNPXEDpgyeMmTe8Lm4EWMU8JEO1DFRfj1NaucIeRSurbde8y7xS1jas60LTTDaw==
 
 "@humanwhocodes/config-array@^0.11.6":
   version "0.11.7"

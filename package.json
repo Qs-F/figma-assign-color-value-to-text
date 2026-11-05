@@ -21,7 +21,7 @@
     "test": "run-p lint"
   },
   "devDependencies": {
-    "@de-liker/drts": "0.1.14",
+    "@de-liker/drts": "0.1.19",
     "@figma/plugin-typings": "1.72.0",
     "@types/color": "3.0.3",
     "@types/node": "16.18.16",
